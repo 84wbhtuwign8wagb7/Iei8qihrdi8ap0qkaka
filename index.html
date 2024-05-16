@@ -17,8 +17,78 @@
   
 
 
-
+<style>*,
+*:before,
+*:after{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+.popup{
+  z-index: 6000;
   
+    background: linear-gradient(to right, #006E99, #00D090);
+    width: 100%;
+    height: 100%;
+    padding: 30px 40px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-family: "Poppins",sans-serif;
+    display: none;
+    text-align: center;
+}
+.popup button{
+    display: block;
+    margin:  0 0 0px auto;
+    background-color: transparent;
+    font-size: 40px;
+    color: #c5c5c5;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+.popup p{
+    font-size: 14px;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 25px;
+}
+</style>
+<body>
+    <div class="popup">
+        <button style="color: white;" id="close">&times;</button>
+        <h2 style="color: white;">!HINWEIS!</h2>
+        <p style="color: white;">
+            Diese Webseite ist nur Dekoration & es werden auch keine ser jeglichen Artikel verkauft! <br>
+          
+        </p>
+    <br><br><br><br> <br><br>
+         <img src="./pngtree-go-green-logos-and-symbol-png-image_5642998.png" style="position: absolute; width: 80%; transform: translate(-50%,-50%);
+    left: 50%;" alt="LOGO">
+
+    </div>
+    
+  
+<script>window.addEventListener("load", function(){
+    setTimeout(
+    function open(event){
+    document.querySelector(".popup").style.display = "block";
+    },
+    1000
+    )
+    });
+    
+    
+    document.querySelector("#close").addEventListener("click", function(){
+    document.querySelector(".popup").style.display = "none";
+    });
+  </script>
   
   <div class="navbar">
     <a class="navlogo">GreenPharmacy <img src="./pngtree-go-green-logos-and-symbol-png-image_5642998.png" style="position: absolute; width: 50px;" alt="LOGO"></a>
@@ -132,7 +202,7 @@
   <img src="./1715844058883.png" alt="logo" style="position: relative; width: 50px;">
 </a>
         </div>
-        <p>Samen nach Wahl</p>
+        <p>Samen nach Wahl</p> 
       </div>
       
 
